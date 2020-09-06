@@ -4,7 +4,7 @@
 # made by wanghua 2019-8-25
 
 function create() {
-    cd /Users/wh_happy/常用/python/自动化脚本
+    cd /Users/wh_happy/常用/python/github自动创建仓库
     python3 create.py $1
     cd /Users/wh_happy/常用/python/MyProjects/$1 
     git init
